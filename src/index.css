@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+/* Custom styles for the typing test */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom utilities */
+.text-shadow-sm {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cursor-typing {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% {
+    background-color: rgb(59, 130, 246);
+    opacity: 1;
+  }
+  51%, 100% {
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
+
+/* Smooth animations */
+.smooth-pulse {
+  animation: smooth-pulse 2s ease-in-out infinite;
+}
+
+@keyframes smooth-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+/* Focus states */
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .typing-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .control-buttons {
+    flex-direction: column;
+  }
+}
